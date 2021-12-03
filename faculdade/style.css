@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+*{
+    /* Remover as margens dos lados */
+    margin: 0;
+    /* Todo espaçamento interno */
+    padding: 0;
+    /* Prennchimento e a borda na largura e altura */
+    box-sizing: border-box;
+
+}
+
+body{
+    /* Torna o elemento flex */
+    display: flex;
+
+    /* Alinha de acordo com o eixo do conteiner */
+    align-items: center;
+
+    /* Alinha de acordo com a direção */
+    justify-content: center;
+
+    /* Altura mínima do elemento */
+    min-height: 100vh;
+
+    background-color: #2e2e2e55;
+}
+
+
+
+div#paralelograma{
+    /* Cor do elemento */
+    background-color:#00acd7 ;
+
+    /*Largura do elemento  */  
+    width: 1000px;
+
+    /* Define a altura do elemento */
+    height: 600px;
+    
+    /*delimita o tamanho máximo do elemento  */
+    max-width: 70vw;
+
+    /* Arredonda cantos */
+    border-radius: 10px;
+
+    /* Adiciona sombra */
+    box-shadow: 5px 5px 15px;
+
+    /* modifica a inclinação do elemento */
+    transform:  skew(6deg, 3deg);
+
+    /*Posiciona qualquer elemento de acordo com o elemento pai  */
+    position: absolute;
+
+    /* Define a ordem dos elementos quando sobre posto */
+    z-index: -1;
+
+
+}
+
+section{
+    display: flex;
+    /* Cor do elemento */
+    background-color: #fff;
+
+    /* Gerar espaço ao redor do conteúdo do elemento */
+    padding: 30px 5px;
+
+    /* Arredondar a borda */
+    border-radius: 10px;
+
+    /* Adicionar sombra aos elementos */
+    box-shadow: 5px 5px 5px;
+
+    /* Tamanhho máximo dos elementos */
+    max-width: 70vw;
+
+}
+
+section h1{
+    padding: 40px 10px;
+    text-align: center;
+}
+
+
+fieldset{
+    /* Remove bordas */
+    border: none;
+}
+
+fieldset:nth-child(2){
+    display: flex;
+}
+fieldset:nth-child(3){
+    display: flex;
+    padding-top: 20px;
+}
+/* fieldset:nth-child(4){
+    display: flex;
+    padding-top: 20px;
+} */
+
+.container input{
+    margin: 10px 10px;
+
+    /* Define a largura do elemento */
+    width: calc(100% - 20px);
+
+    /* Define a altura dos elementos */
+    height: 70px;
+
+    /* remove a borada */
+    border:none;
+
+    background-color: #ededed;
+
+    border-radius: 4px;
+    
+    color:blue;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    padding: 14px 10px 0 10px;
+
+}
+.container{
+    position: relative;
+}
+.container label{
+    text-transform: uppercase;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #9d9d9d;
+
+    position: absolute;
+
+    line-height: 70px;
+
+    top: 10px;
+
+    left: 20px;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    transition: 0.5s;
+}
+
+.container input:focus ~ label,
+.container input:valid ~ label{
+
+    left: 20px;
+    top: -10px;    
+    color: #00acd7;
+}
+
+.buttonenv{
+    margin: 40px 0;
+
+    margin-left: 50%;
+
+    width: calc(50% - 10px);
+
+    height: 70px;
+
+    background: #00acd7;
+
+    color:#fff;
+
+    font-size: 20px;
+
+    border:none;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s linear;
+}
+
+button:hover{
+    opacity: 0.85;
+    
+}
+
+section img{
+    width:150px;
+    height: 150px;
+}
+
+@media only screen and (max-width: 1080px){
+    div#paralelograma{
+        height: 800px;
+    }
+    /* quando a tela for menor que 690 a imagem não aparece */
+    selection img  {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 510px) {
+    /* quando a tela for menor que 510 não mostrara o paralelograma */
+    div#paralelograma{
+        display: none;
+    }
+
+    selection{
+        min-width: 70vw;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    fieldset:nth-child(2),
+    fieldset:nth-child(3){
+        flex-direction: column;
+    }
+
+    /* fieldset:nth-child(4){
+        padding: 0px;
+    } */
+
+    button{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    radio{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+#selectgenero,#descrgenero{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #9d9d9d;
+    font-weight: bold;
+}
+
+.resutcalculo{
+    margin-left: 100px;
+}
+
+/* #return{
+    width: 120px;
+    height: 60px;
+    background-color: aquamarine;
+    border-radius: 10px;
+} */
+
+/* #mprincipal{
+    font-size: 25px;
+    margin-left: 10px;
+    color: #9d9d9d;
+} */
+
+/* .contorno{
+    margin-left: 10px;
+    border-radius: 5px;
+    border: solid 1px rgba(157, 157, 157, 0.197);
+    padding: 10px;
+    background-color: rgba(157, 157, 157, 0.197);
+    
+} */
